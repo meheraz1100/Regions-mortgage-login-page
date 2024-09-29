@@ -1,0 +1,240 @@
+<html>
+ <head>
+  <title>
+   Regions Mortgage Login
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .left {
+            flex: 1;
+            padding: 40px;
+        }
+        .right {
+            flex: 1;
+            background: url('https://www.shutterstock.com/image-photo/new-modern-block-flats-green-600nw-2501530247.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .enroll {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .enroll span {
+            margin-right: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .enroll a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .welcome {
+            margin-top: 50px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .signin {
+            margin-top: 10px;
+            color: #666;
+        }
+        .form-group {
+            margin-top: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group .show-password {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            cursor: pointer;
+        }
+        .remember {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .remember input {
+            margin-right: 10px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .forgot {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .forgot a {
+            text-decoration: none;
+            color: #4CAF50;
+            margin: 0 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 12px;
+            color: #666;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .right {
+                display: none;
+            }
+            .enroll {
+                text-align: left;
+            }
+            .enroll span, .enroll a {
+                display: block;
+                margin-top: 5px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="left">
+    <div class="logo">
+     <img alt="Regions Mortgage Logo" height="40" src="https://play-lh.googleusercontent.com/8K8f_qWCWJxGWB1lujqwmEzGkQM-f8k00SCtdNCKuk4NDDh_nZg2dP-rRUpL7heqVw=w240-h480-rw" width="40"/>
+     <span>
+      REGIONS Mortgage
+     </span>
+    </div>
+    <div class="enroll">
+     <span>
+      Are you a new customer?
+     </span>
+     <a href="#">
+      Enroll Now 
+     </a>
+    </div>
+    <div class="welcome">
+     Welcome Back
+    </div>
+    <div class="signin">
+     Sign in to your Regions MyMortgage account.
+    </div>
+    <div class="form-group">
+     <label for="online-id">
+      Online ID
+     </label>
+     <input id="online-id" type="text" value="randallb"/>
+    </div>
+    <div class="form-group" style="position: relative;">
+     <label for="password">
+      Password
+     </label>
+     <input id="password" type="password" value="************"/>
+     <span class="show-password" onclick="togglePassword()">
+      Show
+     </span>
+    </div>
+    <div class="remember">
+     <input checked="" id="remember-me" type="checkbox"/>
+     <label for="remember-me">
+      Remember me
+     </label>
+    </div>
+    <button class="login-btn">
+     Login
+    </button>
+    <div class="forgot">
+     <a href="#">
+      Forgot Online ID?
+     </a>
+     <a href="#">
+      Forgot Password?
+     </a>
+    </div>
+    <div class="footer">
+     <div>
+      Equal Housing Lender · Member FDIC
+     </div>
+     <div>
+      ©2023 Regions Financial Corporation. All Rights Reserved. · 1 (800) REGIONS
+     </div>
+    </div>
+   </div>
+   <div class="right">
+   </div>
+  </div>
+  <script>
+   function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var showPasswordText = document.querySelector(".show-password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                showPasswordText.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                showPasswordText.textContent = "Show";
+            }
+        }
+  </script>
+ </body>
+</html>
+
+
+        <section>
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
